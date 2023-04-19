@@ -7,7 +7,7 @@ Returns
 import java.io.*;
 import java.util.*;
 
-public class solveMeFirst {
+public class SolveMeFirst {
 
     public static void main(String[] args) {
     Scanner input = new Scanner (System.in);
