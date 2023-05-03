@@ -25,7 +25,8 @@ class Result {
             alphabet[s.charAt(i) - 'a']++; // El metodo charAt separa los caracteres del String y los divide en celdas, despues, dependiendo de la celda se sabe que caracter es.
         }
                 
-        int f1 = 0, f2 = 0, fc1 = 0, fc2 = 0;
+        int f1 = 0, f2 = 0, fc1 = 0, fc2 = 0; // f1 y f2 representan las frecuencias mas comunes en el string, fc1 y fc2 representan la cantidad de caracteres que tienen f1 y f2, por ejemplo: hay 3 A, 2 B y 3 C, f1=3| f2=2| fc1=A y C| fc2=B
+        //Entiendo que puede haber mas de dos caracteres distintos, mientras tengan las misma frecuencias de f1 o f2 con respecto a los otros caracteres. de no tener la misma frecuencia, no cumple las condiciones y es un string no valido.
         for (int i = 0; i < alphabet.length; i++) {
             if (alphabet[i] != 0) {
                 if (alphabet[i] == f1) {
@@ -44,7 +45,7 @@ class Result {
             }
         }
         return f2 == 0 || (f1 == f2 - 1 && fc2 == 1) || (f1 - 1 == f2 && fc1 == 1) ||
-            (f1 == 1 && fc1 == 1) || (f2 == 1 && fc2 == 1) ? "YES" : "NO";
+            (f1 == 1 && fc1 == 1) || (f2 == 1 && fc2 == 1) ? "YES" : "NO"; // Estas condiciones no las termino de entender, como las entiendo no me cierra
     }
     }
 
