@@ -19,11 +19,11 @@ public class SherlockAndValidString {
         if (distinctValues == 1) {
             return "YES";
         } else if (distinctValues == 2) {
-            int min = Collections.min(values);
-            int max = Collections.max(values);
-            int minCount = (int) values.stream().filter(v -> v == min).count();
-            int maxCount = (int) values.stream().filter(v -> v == max).count();
-            if ((min == 1 && minCount == 1) || (max - min == 1 && maxCount == 1)) {
+            int min = Collections.min(values); //Encuentra el valor minimo
+            int max = Collections.max(values); //Encuentra el valor maximo
+            int minCount = (int) values.stream().filter(v -> v == min).count(); //Cuenta cuantas veces aparece el valor minimo
+            int maxCount = (int) values.stream().filter(v -> v == max).count(); //Cuenta cuantas veces aparece el valor maximo
+            if ((min == 1 && minCount == 1) || (max - min == 1 && maxCount == 1)) { //La primera comprueba si el valor minimo es igual a 1 y aparece una sola vez, la segunda si la dif entre el valor maximo y el minimo es igual a 1 y el valor maximo aparece una sola vez (se puede borrar)
                 return "YES";
             }
         }
